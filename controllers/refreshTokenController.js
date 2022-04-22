@@ -1,15 +1,21 @@
-const usersDB = {
-    users: require('../model/users.json'),
-    setUsers: function (data) { this.users = data }
-}
+// const usersDB = {
+//     users: require('../model/users.json'),
+//     setUsers: function (data) { this.users = data }
+// }
+
+const User = require('../model/User'); //now that we importd the user model, we can refresh the token etc..
+
+
 const jwt = require('jsonwebtoken');
 
-const handleRefreshToken = (req, res) => {
+const handleRefreshToken = async (req, res) => {
     const cookies = req.cookies;
     if (!cookies?.jwt) return res.sendStatus(401);
     const refreshToken = cookies.jwt;
 
-    const foundUser = usersDB.users.find(person => person.refreshToken === refreshToken);
+    //const foundUser = usersDB.users.find(person => person.refreshToken === refreshToken);
+    const foundUser = await User.findOne({ refreshToken }).exec();  //syntac becasue property name and value name are the same refreshToken
+
     if (!foundUser) return res.sendStatus(403); //Forbidden 
     // evaluate jwt 
     jwt.verify(
