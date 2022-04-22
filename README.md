@@ -2,8 +2,8 @@
 
 ✅ [Check out my YouTube Channel with all of my tutorials](https://www.youtube.com/DaveGrayTeachesCode).
 
-**Deplpoy by clicking the button above**
-[<img src="https://cdn.gomnix.com/"2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix-button.svg" width"163px" />](https://glitch.com/edit/#!/import/github.com/sebastienpiette/node-js-tuto)
+**Deplpoy by clicking the button below**
+[<img src="https://cdn.gomnix.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix-button.svg" width="163px" />](https://glitch.com/edit/#!/import/github.com/sebastienpiette/node-js-tuto)
 
 
 **Description: hello**
